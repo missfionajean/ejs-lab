@@ -75,7 +75,7 @@ app.get("/", (req, res) => {
 
 // menu path HTTP request (allows navigation to menu page)
 app.get("/menu", (req, res) => {
-	res.render("menu.ejs");
+	res.render("menu.ejs", RESTAURANT);
 });
 
 // creates listener for HTTP requests (goes at bottom)
