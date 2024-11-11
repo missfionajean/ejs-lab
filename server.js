@@ -73,6 +73,11 @@ app.get("/", (req, res) => {
 	res.render("home.ejs", RESTAURANT);
 });
 
+// menu path HTTP request (allows navigation to menu page)
+app.get("/menu", (req, res) => {
+	res.render("menu.ejs");
+});
+
 // creates listener for HTTP requests (goes at bottom)
 app.listen(port, () => {
 	console.log(`Listening on port ${port}`);

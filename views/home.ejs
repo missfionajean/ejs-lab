@@ -6,6 +6,9 @@
 		<title><%= name %></title>
 	</head>
 	<body>
+		<!-- pulls in partial template -->
+		<%- include('./partials/nav') %>
+
 		<!-- headings from locals object -->
 		<h1><%= name %></h1>
 		<h2><%= address %></h2>
