@@ -3,12 +3,62 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="menu-style.css" />
 		<title>Menu</title>
 	</head>
 	<body>
 		<!-- pulls in partial template (nav bar) -->
-		<%- include('./partials/nav') %>
+		<%- include('./partials/nav.ejs') %>
 
+		<!-- heading -->
 		<h1>Full Menu</h1>
+        <hr>
+
+		<!-- mains section -->
+		<section class="category" id="mains">
+			<h2 class="menu-header">Mains</h2>
+			<% menu.forEach((item) => { %> <% if (item.category === "mains") {
+			%>
+			<div class="menu-item">
+				<div class="item-header">
+					<h3><%= item.name %> (<%= item.rating %>★)</h3>
+					<h3>$<%= item.price %></h3>
+				</div>
+				<p><%= item.details %></p>
+			</div>
+			<% }}) %>
+		</section>
+        <hr>
+
+		<!-- sides section -->
+		<section class="category" id="sides">
+			<h2 class="menu-header">Sides</h2>
+			<% menu.forEach((item) => { %> <% if (item.category === "sides") {
+			%>
+			<div class="menu-item">
+				<div class="item-header">
+					<h3><%= item.name %> (<%= item.rating %>★)</h3>
+					<h3>$<%= item.price %></h3>
+				</div>
+				<p><%= item.details %></p>
+			</div>
+			<% }}) %>
+		</section>
+        <hr>
+
+		<!-- desserts section -->
+		<section class="category" id="desserts">
+			<h2 class="menu-header">Desserts</h2>
+			<% menu.forEach((item) => { %> <% if (item.category === "desserts") {
+			%>
+			<div class="menu-item">
+				<div class="item-header">
+					<h3><%= item.name %> (<%= item.rating %>★)</h3>
+					<h3>$<%= item.price %></h3>
+				</div>
+				<p><%= item.details %></p>
+			</div>
+			<% }}) %>
+		</section>
 	</body>
 </html>

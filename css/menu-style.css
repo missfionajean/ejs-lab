@@ -1,0 +1,38 @@
+* {
+	box-sizing: border-box;
+	color: lightgrey;
+	background-color: #06402b;
+}
+
+h1 {
+	font-size: 36px;
+}
+
+.category {
+	display: flex;
+	flex-direction: column;
+}
+
+.menu-header {
+	font-size: 28px;
+	text-decoration: underline;
+}
+
+.menu-item {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	width: 90dvw;
+	height: fit-content;
+	margin: 5px 0;
+}
+
+.item-header {
+	display: flex;
+	justify-content: space-between;
+	margin: 0;
+}
+
+.price-bar {
+	display: flex;
+}

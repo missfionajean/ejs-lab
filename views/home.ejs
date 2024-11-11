@@ -3,11 +3,12 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="home-style.css" />
 		<title><%= name %></title>
 	</head>
 	<body>
 		<!-- pulls in partial template (nav bar) -->
-		<%- include('./partials/nav') %>
+		<%- include('./partials/nav.ejs') %>
 
 		<!-- headings from locals object -->
 		<h1><%= name %></h1>

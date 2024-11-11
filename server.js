@@ -2,12 +2,16 @@
 const express = require("express");
 const app = express();
 
+// allows express to find external static folders
+app.use(express.static(__dirname + "/css"));
+
 // setting up morgan for better HTTP logging
 /* remember this is middleware that must be installed */
 const morgan = require("morgan");
 app.use(morgan("dev"));
 
 // setting up validator dependency to use later
+/* Source: https://expressjs.com/en/starter/static-files.html */
 const validator = require("validator");
 
 // creating variable for port (for easier testing)
