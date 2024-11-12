@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="menu-style.css" />
+		<title><%= categoryName.charAt(0).toUpperCase()+categoryName.slice(1) %></title>
+	</head>
+	<body>
+		<!-- pulls in partial template (nav bar) -->
+		<%- include('./partials/nav.ejs') %>
+
+		<!-- heading -->
+		<h1><%= categoryName.charAt(0).toUpperCase()+categoryName.slice(1) %></h1>
+		<hr />
+
+		<!-- mains section -->
+		<section class="category" id=<%= categoryName %>>
+			<% items.forEach((item) => { %> <% if (item.category ===
+			categoryName) { %>
+			<div class="menu-item">
+				<div class="item-header">
+					<h3><%= item.name %> (<%= item.rating %>★)</h3>
+					<h3>$<%= item.price %></h3>
+				</div>
+				<p><%= item.details %></p>
+			</div>
+			<% }}) %>
+		</section>
+	</body>
+</html>

@@ -12,7 +12,7 @@
 
 		<!-- heading -->
 		<h1>Full Menu</h1>
-        <hr>
+		<hr />
 
 		<!-- mains section -->
 		<section class="category" id="mains">
@@ -28,7 +28,7 @@
 			</div>
 			<% }}) %>
 		</section>
-        <hr>
+		<hr />
 
 		<!-- sides section -->
 		<section class="category" id="sides">
@@ -44,13 +44,13 @@
 			</div>
 			<% }}) %>
 		</section>
-        <hr>
+		<hr />
 
 		<!-- desserts section -->
 		<section class="category" id="desserts">
 			<h2 class="menu-header">Desserts</h2>
-			<% menu.forEach((item) => { %> <% if (item.category === "desserts") {
-			%>
+			<% menu.forEach((item) => { %> <% if (item.category === "desserts")
+			{ %>
 			<div class="menu-item">
 				<div class="item-header">
 					<h3><%= item.name %> (<%= item.rating %>★)</h3>

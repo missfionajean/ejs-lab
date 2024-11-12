@@ -82,6 +82,16 @@ app.get("/menu", (req, res) => {
 	res.render("menu.ejs", RESTAURANT);
 });
 
+// category path HTTP request (more specific version of menu)
+app.get("/menu/:category", (req, res) => {
+	const categoryPath = req.params.category;
+	const menuItems = {
+		items: RESTAURANT.menu.filter((item) => item.category === categoryPath),
+		categoryName: categoryPath,
+	};
+	res.render("category.ejs", menuItems);
+});
+
 // creates listener for HTTP requests (goes at bottom)
 app.listen(port, () => {
 	console.log(`Listening on port ${port}`);
